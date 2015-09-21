@@ -1,0 +1,1066 @@
+/*
+Author: Danko Milutinovic
+Desctiption: 
+  ...
+Contact:  dankomilutinovic@gmail.com, 
+          https://rs.linkedin.com/pub/danko-milutinovic/a3/675/778 
+*/
+
+/* ==========================================================================
+	GENERAL STYLES
+========================================================================== */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background: transparent;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+	width: auto;
+	max-width: 1000px;
+}
+input[type="text"],
+input[type=search],
+input[type=password],
+textarea,
+select {
+	padding: 10px 5px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+.orange {
+	color: #fb8759;
+}
+.blue {
+	color: #1fa0c1;
+}
+/* temp*/
+.glyphicon-minus {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding:  5px;
+	font-size: 20px;
+	color: #f36e3a;
+	border: 2px solid #f36e3a;
+	border-radius: 5px;
+}
+.no-reviews {
+	display: none;
+	text-align: center;
+	padding: 50px 20px;
+	background: #fff;
+}
+/* tabs reset */
+.nav-tabs {
+	border-bottom: none;
+}
+.nav-tabs>li {
+	margin-bottom: 0;
+}
+.nav-tabs>li>a, .nav-tabs>li>a:focus, .nav-tabs>li>a:hover,
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: #555;
+  border: none;
+  border-radius: 0;
+  border-bottom: none;
+  margin: 0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	color: #f36e3a;
+}
+.btn {
+	display: block;
+}
+.btn-orange,
+.btn-orange:hover,
+.btn-orange:focus {
+	background: url(../img/btn-gradient.png);
+	color: #fff;
+	text-align: center;
+	border: 1px solid #aa442d;
+}
+/* ==========================================================================
+	NAVIGATION
+========================================================================== */
+
+/* header nav*/
+.container>.navbar-header {
+  margin-right: -30px;
+  margin-left: -30px;
+}
+.navbar {
+	margin-bottom: 0;
+}
+.navbar-default {
+	background: #fff;
+}
+.navbar-brand>img {
+  width: 150px;
+}
+.avatar {
+	border: 2px solid #ddd;
+	border-radius: 50%;
+}
+.navbar-nav>li>a {
+	color: #4d4d4d;
+}
+.navbar-default .navbar-toggle, 
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+	float: left;
+	margin-left: 5px;
+	border: none;
+	background: transparent !important;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000;
+}
+.lawyers {
+	position: absolute;
+  top: 12px;
+  right: 15px;
+	display: none;
+}
+.search {
+	position: absolute;
+	top: 10px;
+	left: 60px;
+	display: none;
+	width: 29px;
+	height: 29px;
+	background: url(../images/search_icon.png) no-repeat;
+	cursor: pointer;
+}
+.search-box {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	display: none;
+  z-index: 5;
+}
+.search-box .btn {
+  display: inline-block;
+  padding: 11px;
+  margin-top: -1px;
+  color: #fff;
+}
+.filter-search {
+	display: none;
+	padding: 10px;
+	margin-top: 10px;
+	line-height: 30px;
+	background: #fff;
+}
+.filter-search input[type=radio] {
+	margin-right: 10px;
+}
+/*  */
+li.active {
+	position: relative;
+}
+li.active a {
+	color: #f36e3a;
+}
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a:hover {
+	background: #fff;
+}
+ul.nav.navbar-nav.navbar-right {
+  margin-left: -30px;
+}
+
+/* ==========================================================================
+	CONTENT
+========================================================================== */
+.profile-header, 
+.profile-content {
+	min-height: 200px;
+	padding-bottom: 20px;
+	border-radius: 5px;
+  overflow: hidden;
+}
+.profile-header {
+	position: relative;
+  margin-bottom: 10px;
+  background: #fff;
+}
+.profile-img-holder,
+.profile-details {
+  margin: 20px 0;
+}
+.profile-img-holder {
+	text-align: center;
+}
+.profile-img-holder img {
+	width: 100%;
+	max-width: 218px;
+}
+.lawyer-name {
+	margin-bottom: 20px;
+}
+.lawyer-name {
+	line-height: 35px;
+}
+.profile-header .star-rating {
+	float: left;
+  background: url(../img/ribbon.png) no-repeat;
+  width: 110px;
+  padding-left: 10px;
+}
+.profile-header .rating-container {
+	color: #dc531d;
+}
+.profile-header .rating-container .rating-stars {
+  color: #fff;
+}
+.name {
+	padding-left: 20px;
+	font-weight: 700;
+	background: url(../images/user2.png) 0px 3px no-repeat;
+}
+.profile-details ul li {
+	padding-left: 20px;
+  line-height: 1em;
+  margin-bottom: 7px;
+}
+.company {
+	background: url(../images/suitcase.png) no-repeat;
+}
+.address {
+	background: url(../images/location-directory.png) no-repeat;
+}
+.phone {
+	background: url(../images/phone.png) 0px 3px no-repeat;
+}
+.practice-areas-title {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.tm-tag {
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	padding: 5px 10px !important;
+	border-radius: 5px;
+	border: none;
+	box-shadow: none;
+	background: #d2d2d2;
+	font-size: 16px;
+	color: #fff;
+}
+.tm-tag a {
+	color: #fff;
+}
+.btn-pub-profile {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #1fa0c1;
+  color: #fff;
+}
+.btn-pub-profile:hover {
+	color: #fff;
+}
+.log {
+	position: absolute;
+	top: 150px;
+	right: 20px;
+	display: block;
+}
+/*  tabs  */
+.nav-tabs>li {
+	width: 50%;
+	text-align: center;
+}
+.nav-tabs>li>a {
+	padding-left: 0;
+	padding-right: 0;
+}
+.nav-tabs .active:before {
+	display: none;
+}
+.tab-pane h5 {
+	margin-top: 0;
+}
+#reviews {
+	position: relative;
+}
+/* chart */
+#myChart {
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+.general-info-left ul {
+	margin-top: 30px;
+}
+/* rating */
+.rating-xs {
+	font-size: 16px;
+}
+.general-info-right .pull-left {
+  min-width: 100%;
+}
+.general-info-right .star-rating {
+	float: left;
+}
+.general-info-right .star-rating {
+	text-align: right;
+}
+.rating-container .rating-stars {
+	color: #f8663d;
+}
+.star-rating .label-default,
+.star-rating .label-primary,
+.star-rating .label-success,
+.star-rating .label-info,
+.star-rating .label-warning,
+.star-rating .label-danger {
+	padding: 0;
+	font-size: 14px;
+	font-weight: normal;
+  color: #000;
+	background: transparent;
+}
+.rating-disabled {
+	cursor: default;
+}
+.general-info {
+	padding: 10px 0 10px 10px;
+	background: #fff;
+}
+.review-item {
+	margin-top: 30px;
+}
+.review {
+	position: relative;
+	padding: 20px 20px 10px;	
+	background: #fff;
+}
+.review p {
+	margin: 35px 0 30px 0;
+}
+.rating {
+	float: left;
+}
+.rated {
+	margin-bottom: 20px;
+}
+.rated > div {
+	line-height: 30px;
+}
+.rated-left, 
+.rated-right .rating-xs {
+	text-align: left;
+}
+.date {
+  margin-right: 15px;
+}
+.share {
+	padding-left: 20px;
+	color: #0f90ba;
+	background: url(../images/shar.png) 0px 3px no-repeat;
+}
+/* q&a tab */
+.disclaimer {
+	padding: 20px;
+	margin-bottom: 20px;
+	background: #fff;
+}
+.pencil-ico,
+.checked-ico {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/qa-icons.png);
+	cursor: pointer;
+}
+.checked-ico {
+	background-position: 18px 0;
+}
+.disclaimer .pencil-ico {
+	margin-left: 20px;
+	margin-right: 5px;
+}
+.disclaimer textarea {
+	width: 100%;
+	max-width: 100%;
+	min-height: 150px;
+	margin-top: 5px;
+}
+.qa-item {
+	padding: 20px;
+	background: #fff;
+	border-bottom: 1px solid #e2e2e2;
+}
+.question {
+	font-weight: 700;
+	color: #000;
+	cursor: pointer;
+}
+.q-author,
+.answer {
+	margin-top: 15px;
+}
+.q-author {
+	font-style: italic;
+	color: #fb8759;
+}
+.answer a {
+	color: #1fa0c1;
+}
+.textarea-wrapper {
+	position: relative;
+}
+.qa-item textarea {
+	width: 100%;
+	min-height: 150px;
+	margin-top: 10px;
+}
+.textarea-wrapper .checked-ico {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+}
+/*  profile information tab */
+#profile-information {
+	padding: 20px;
+	background: #fff;
+}
+#profile-information .input-description {
+  float: right;
+  margin-top: -15px;
+	font-size: 10px;
+	color: #44b0c9;
+}
+#profile-information .col-sm-12 .input-description {
+	width: 110px;
+	margin-top: 0;
+	text-align: right;	
+	line-height: 2.4em;
+}
+#profile-information .col-sm-12 .separator {
+	display: none;
+}
+#profile-information span {
+	display: block;
+}
+#profile-information input[type="password"],
+#profile-information input[type="text"],
+#profile-information select,
+.input-wrapper{
+	display: inline-block;
+	width: 99.99%;
+	max-width: 320px;
+  margin: 5px 0;
+}
+.input-wrapper {
+	position: relative;
+	margin: 0;
+}
+.input-wrapper .pencil-ico,
+.input-wrapper .checked-ico {
+	display: none !important;
+	position: absolute;
+	top: 18px;
+	right: 18px;
+}
+.input-wrapper .pencil-ico {
+	right: 43px;
+}
+.gender {
+	margin: 15px 0;
+}
+#profile-information .radio-label {
+	position: relative;
+	top: 3px;
+	display: inline-block;
+	margin-right: 20px;
+}
+.iradio_minimal-orange {
+	margin-right: 10px;
+}
+
+select option[disabled] {
+  color: transparent;
+  display: none;
+}
+.media {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+#profile-information input[name="firm-name"] {
+	max-width: 100%;
+}
+.nice {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.NFI-filename {
+  padding: 11px 5px !important;  
+}
+.nice .NFI-button {
+  position: absolute !important;
+  top: 1px;
+  right: 3px;
+  padding: 11px;
+  border-left: 1px solid #ddd;
+  color: #8c8c8c;
+  background: #fff;
+}
+.tags-container span {
+	display: inline-block !important;
+}
+.tm-input {
+	display: block !important;
+	margin-right: 5px !important;
+}
+.tm-input, #addtag {
+	float: left;
+}
+#addtag {
+  padding: 11px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.tags-container {
+	clear: both;
+}
+#profile-information h4 {
+	font-weight: 700;
+}
+#profile-information a {
+	color: #1fa0c1;
+}
+#profile-information .btn-up-img {
+  min-width: 100px !important;
+  padding: 12px;
+  margin-bottom: 35px;
+  color: #fff;
+}
+#profile-information .btn {
+	min-width: 200px;
+}
+#profile-information .btn-orange {
+  background: url(../img/btn-gradient-big.png);
+	padding: 11px;
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+/* notification tab*/
+#notification {
+	padding: 20px;
+	text-align: center;
+	background: #fff;
+}
+#notification h4 {
+	font-weight: 700;
+	margin: 15px 0 40px 0;
+}
+#notification form {
+	text-align: left;
+}
+#notification input {
+	
+}
+#notification div {
+	margin: 35px 0 15px 0;
+}
+#notification .icheckbox_minimal-orange {
+	margin: 11px 10px 15px 0
+}
+#notification .btn {
+	max-width: 200px;
+	margin: 0 auto;
+}
+/* ==========================================================================
+	SIDEBAR
+========================================================================== */
+.sidebar {
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.sidebar h3,
+.nearby-lawyers h3 {
+	margin: 10px 0 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.rounded-border {
+	border-radius: 5px;
+	overflow: hidden;
+}
+.your-question {
+	margin: 15px 0;
+}
+.qa-item .q-author {
+	font-size: 13px;
+}
+.top-rated-lawyer {
+	padding: 20px;
+	margin: 0;
+	background: #fff;
+	text-decoration: none;
+}
+.top-rated-lawyer:hover {
+	text-decoration: none;
+	background: #f5f5f5;
+}
+.top-rated-lawyer img {
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin-right: 15px;
+}
+.top-rated-lawyer a span {
+	color: #000;
+	font-weight: 700;
+}
+.top-rated-lawyer > span {
+	color: #959595;
+}
+.top-rated-lawyer .address {
+	padding-left: 15px;
+	color: #000;
+}
+.q-for-you {
+	margin-bottom: 20px;
+}
+.q-for-you textarea {
+	width: 100%;
+}
+.nearby-lawyers .star-rating {
+  display: inline-block;
+  width: 110px;
+	background: url(../img/ribbon.png) 0px 0px no-repeat;
+  line-height: 35px;
+}
+.nearby-lawyers .rating-container {
+	color: #dc531d;
+	left: 10px;
+}
+.nearby-lawyers .rating-stars {
+  color: #fff;
+}
+
+/* ==========================================================================
+	FOOTER
+========================================================================== */
+
+.footer {
+	background: #fff;
+}
+.footer h4 {
+  padding-bottom: 5px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #9a9a9a;
+}
+.footer a {
+	position: relative;
+	line-height: 25px;
+	color: #989898;
+}
+.footer .social a {
+	margin-left: 30px;	
+} 
+.social span {
+  position: absolute;
+  left: -30px;
+  width: 25px;
+  height: 25px;
+
+/* in case client want's animation */
+
+/*	transition: background-position 0.25s ease;
+	-webkit-transition: background-position 0.25s ease;
+	-ms-transition: background-position 0.25s ease;
+*/
+  background-position: 0px -73px;
+  border-radius: 50%;
+}
+.footer .social a:hover span {
+	background-position: 0 0;
+}
+.linkedin {
+	background: url(../images/linkedin.png) no-repeat;
+}
+.facebook {
+	background: url(../images/facebook.png) no-repeat;
+}
+.twitter {
+	background: url(../images/twitter.png) no-repeat;
+}
+.google {
+	background: url(../images/google-plus.png) no-repeat;
+}
+.copy {
+	max-width: 550px;
+	margin: 50px auto 0;
+	text-align: center;
+	border-top: 1px solid #b6b6b6;
+	padding: 10px 0;
+	color: #b6b6b6;
+}
+/*============================================================================
+	(BOOTSTRAP 3) MEDIA QUERIES             
+============================================================================*/
+
+/* Custom media querie (non bootstrap) */ 
+@media only screen and (min-width : 360px) and (max-width : 767px) {
+	.navbar-brand {
+		margin: 0 auto;
+	  display: block;
+	  float: none;
+	  width: 150px;
+	}
+	.search,
+	.lawyers{
+		display: block;
+		color: #838383;
+	}
+}
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+	#profile-information span {
+		font-size: 15px;
+	}
+}
+@media only screen and (min-width : 380px) and (max-width : 767px), (min-width : 992px) {
+	.input-wrapper .pencil-ico,
+	.input-wrapper .checked-ico {
+		display: inline-block !important;
+	}
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	.top-rated-lawyer img {
+		float: left;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	.profile-img-holder {
+		min-width: 240px;
+		min-height: 240px;
+	}			
+	.profile-img-holder img {
+		width: auto;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {			
+
+	body {
+		background: url(../images/bg2.png);
+	}
+/*	.container {
+	  width: auto;
+	}*/
+	.container>.navbar-header {
+	  margin-right: 0;
+	  margin-left: 0;
+	}
+	.navbar-brand {
+	  margin-top: 10px;
+	}
+	.navbar-brand>img {
+	  width: auto;
+	}
+	.navbar-right .dropdown-menu {
+	  left: 0;
+	}
+	#bs-example-navbar-collapse-2 {
+		padding: 0;
+	}
+	.profile-header {
+		padding: 0 20px;
+		}
+	.sidebar {
+	  float: right;
+	  width: 28%;
+	  min-height: 410px;
+	  margin-left: 2%;
+	}
+	.top-rated-lawyer img {
+		float: none;
+	}
+	.profile-content {
+		float: right;
+	  width: 70%;
+	}
+	.profile-img-holder  {
+		float: left;
+		padding-right: 20px;
+	}
+	.profile-details {
+		float: left;
+		padding-left: 15px;
+		border-left: 1px solid #d3d3d3;
+		max-width: 440px;
+	}
+	.profile-header .star-rating {
+	  margin-left: -25px;
+	}
+	.no-reviews {
+		padding: 50px 70px;
+	}
+	.btn-pub-profile {
+		position: absolute;
+		top: 0;
+		right: 20px;
+	}
+	/* css triangle for active submenu item */
+	li.active {
+		text-align: center;
+	}
+	li.active:before {
+		content: "";
+		position: absolute;
+		top: -1px;
+		z-index: 10;
+		display: inline-block;
+		margin-left: -10px;
+	  width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;	
+		border-top: 10px solid #fff;				
+	}
+	.nice {
+	  min-width: 295px;
+	}
+	#notification form {
+		padding-left: 50px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	#profile-information .input-description {
+		margin-top: -20px;
+		font-size: 16px;
+	}
+	#profile-information .col-sm-12 .input-description {
+		width: auto;
+		line-height: 1.42857143;
+	}
+	#profile-information .col-sm-12 .separator {
+		display: inline-block;
+	}
+	.navbar-left {
+		background: transparent;
+	}
+	.navbar-left>li>a:focus, 
+	.navbar-left>li>a:hover {
+		background: transparent;
+	}
+	.nav-tabs>li {
+		width: 25%;
+	}
+	.profile-img-holder {
+		float: left;
+		padding-right: 20px;
+	}
+	.profile-details {		
+	  max-width: 660px;
+	}
+	#myChart {
+		margin-bottom: 0;
+	}
+	.general-info-left, 
+	.general-info-right {
+		float: left;
+	}
+	.general-info-left {
+	  width: 33%;
+	  margin-right: 10px;
+	  border-right: 1px solid #d2d2d2;
+	}	
+	.general-info-right .pull-left{
+	  min-width: 220px;
+	}
+	.general-info-right {
+		min-width: 420px;
+	}
+	.reviewer {
+		float: left;
+		width: 10%;
+		font-size: 14px;
+	}
+	.review {
+		float: left;
+		width: 90%;
+		border-radius: 5px;
+	}
+	/*  css triangle */
+	.review:before {
+		position: absolute;
+  	top: 15px;
+		left: -10px;
+		display: block;
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent #fff transparent transparent;
+	} 
+	.rated-left, 
+	.rated-right .rating-xs {
+		width: 50%;
+		float: left;
+	}
+	.rated-left {
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	#notification form {
+		padding-left: 150px;
+	}
+	/* sidebar */
+	.top-rated-lawyer img {
+		float: left;
+	}
+	.tm-input {
+		max-width: 370px !important;
+	}
+	#addtag {
+	  min-width: 242px !important;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.profile-details {
+	  max-width: 690px;
+	}
+	#addtag {
+	  min-width: 264px !important;
+	}
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {
+	.profile-content {
+		overflow: visible;
+	}
+	.nav-tabs {
+	  border-top: 1px solid #d2d2d2;
+	  border-left: 1px solid #d2d2d2;
+    background: #fff;	
+	}
+	.nav-tabs>li {
+	  border-right: 1px solid #d2d2d2;
+	  border-bottom: 1px solid #d2d2d2;
+	}
+	.review {
+		margin-top: 20px;
+		border: 1px solid #dedede;
+	  border-radius: 5px;
+	}
+	/* css triangle up */
+	.review:before, .review:after{
+		position: absolute;
+  	top: -10px;
+		left: 10px;
+		display: block;
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 10px 10px 10px;
+		border-color: transparent transparent #ddd transparent;
+	}
+	.review:after {
+  	top: -9px;
+		border-color: transparent transparent #fff transparent;
+	}  
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	.name {
+		font-size: 14px;
+	}
+	#profile-information {
+	  padding: 20px 0;
+	}
+	.profile-details > a {
+		display: block;
+	}
+	.profile-details ul li,
+	.share {
+		font-size: 13px;
+	}
+	#profile-information input[type="password"], #profile-information input[type="text"], #profile-information select, .input-wrapper {
+	  max-width: 100%;
+	}
+	#profile-information .col-sm-12 .btn {
+	  min-width: 100%;
+	  margin-top: 10px;
+	}
+	.prev-prof {
+		display: none;
+	}
+	#profile-information .col-sm-9 {
+		display: none;
+	}
+	.btn-pub-profile {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	.review > span {
+		font-size: 10px;
+	}
+	.q-for-you {
+	  padding: 10px;
+	  border: 1px solid #dedede;
+	  border-radius: 5px;
+	}
+	.qa-item:last-child {
+    border: none;
+	}
+	.sidebar h3, .nearby-lawyers h3 {
+	  font-size: 18px;
+	}
+	.nearby-lawyers .rounded-border {
+	  border: 1px solid #dedede;
+	}
+}
+
+@media only screen and (max-width : 285px) {
+	.profile-details .name {
+		display: block;
+		clear: both;
+		background-position: 0 8px;
+	}
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	.footer .col-sm-3 {
+	  width: 220px;
+	  margin: 0 auto;
+	}
+}

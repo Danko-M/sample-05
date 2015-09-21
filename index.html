@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://dev105.lawcorner.com.au/favicon.ico" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/star-rating.min.css" rel="stylesheet">
+    <link href="assets/css/tagmanager.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/icheck.css">    
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="container"><!-- Brand and toggle get grouped for better mobile display -->
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1, #bs-example-navbar-collapse-2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!-- search for mobile devices -->
+            <span class="search"></span>
+            <div class="search-box">
+              <input class="mob-search" type="search" placeholder="Search for (eg. John Smith, family law)">
+              <button class="btn" type="button">Go</button>
+              <div class="filter-search">
+                <input type="radio" name="filter" value="information"><span class="radio-label">Information (Questions &amp; Answers)</span><br>
+                <input type="radio" name="filter" value="lawyers"><span class="radio-label">Lawyers / Law Firms</span>
+              </div>
+            </div>
+            
+            <!-- brand/logo -->
+            <a class="navbar-brand" href="#">
+              <img src="assets/images/logo.png" alt="LawCorner">
+            </a>
+            <!-- lawyers link (visible only for mobile) -->
+            <a href="#" class="lawyers">Lawyers</a>
+          </div><!-- /.navbar-header -->
+          
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                  <img class="avatar" src="assets/img/user-sm.jpg" alt="..">
+                Alex Rostova<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Edit profile</a></li>
+                  <li><a href="#">Favorites</a></li>
+                  <li><a href="#">Account Settings</a></li>
+                  <li><a href="#">Log out</a></li>
+                </ul>
+              </li>
+            </ul> 
+          </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    
+    <!-- secoundary menu -->
+    <div class="container">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="active"><a href="#">Find information</a></li>
+          <li><a href="#">Find a lawyer</a></li>
+          <li><a href="#">Review a Lawyer</a></li>          
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="container">
+			<!-- profile header -->
+      <div class="profile-header clearfix">
+        <div class="profile-img-holder">
+          <img src="assets/img/user-xl.jpg" alt=".." class="img-circle">
+        </div>
+        <div class="profile-details">
+	        <div class="lawyer-name">
+	        	<input type="text" class="invisible rated-01" value="4">
+  	        <span class="name">Rebecca Atkins</span>
+	        </div>
+          <ul>
+            <li class="company">Atkins &amp; Co</li>
+            <li class="address">14 King Street Newcastle NSW 2300</li>
+            <li class="phone orange">(02) 49261957</li>
+          </ul>
+          <a href="#" class="share">Share Profile</a>
+          <div class="practice-areas-title">Practice Areas:</div>
+          <ul class="practice-areas">
+					  <li class="tm-tag"><a href="#">Vivamus (3)</a></li>
+					  <li class="tm-tag"><a href="#">Nam cursus lobortis (49)</a></li>
+					  <li class="tm-tag"><a href="#">Vivamus (3)</a></li>
+					  <li class="tm-tag"><a href="#">Nam cursus lobortis (49)</a></li>
+					  <li class="tm-tag"><a href="#">Vivamus (3)</a></li>
+					  <li class="tm-tag"><a href="#">Vivamus (3)</a></li>
+					</ul>	       
+        </div><!-- /.profile-details -->
+        <a class="btn-pub-profile" href="#" role="button">View my public profile</a>
+      </div><!-- /.profile-header -->
+
+
+
+
+
+
+      <div class="sidebar">
+
+      	<div class="q-for-you">
+      		<h3 class="blue">Questions for you</h3>
+      		<div class="rounded-border">
+      			<div class="qa-item">
+      				<a class="question" data-toggle="collapse" href="#collapseExample01">Vivamus elementum nunc sed velit auctor auctor.</a>
+    					<div class="q-author orange">A.R of Redhead NSW 18.5.2015 8.45am</div>
+      				<div class="answer-group collapse" id="collapseExample01">
+      					<div class="answer">Vivamus elementum nunc sed velit auctor auctor.  Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu... </div>
+      					<textarea class="your-question" placeholder="Add Answer"></textarea>
+      					<a class="btn btn-orange" href="#">Add Answer</a>
+      				</div>
+      			</div>
+      			<div class="qa-item">
+      				<a class="question" data-toggle="collapse" href="#collapseExample02">Vivamus elementum nunc sed velit auctor auctor.</a>
+    					<div class="q-author orange">A.R of Redhead NSW 18.5.2015 8.45am</div>
+      				<div class="answer-group collapse" id="collapseExample02">
+      					<div class="answer">Vivamus elementum nunc sed velit auctor auctor.  Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu... </div>
+      					<textarea class="your-question" placeholder="Add Answer"></textarea>
+      					<a class="btn btn-orange" href="#">Add Answer</a>
+      				</div>
+      			</div>
+      			<div class="qa-item">
+      				<a class="question" data-toggle="collapse" href="#collapseExample03">Vivamus elementum nunc sed velit auctor auctor.</a>
+    					<div class="q-author orange">A.R of Redhead NSW 18.5.2015 8.45am</div>
+      				<div class="answer-group collapse" id="collapseExample03">
+      					<div class="answer">Vivamus elementum nunc sed velit auctor auctor.  Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu... </div>
+      					<textarea class="your-question" placeholder="Add Answer"></textarea>
+      					<a class="btn btn-orange" href="#">Add Answer</a>
+      				</div>
+      			</div>
+      		</div>
+      	</div><!-- /.q-for-you -->
+      	
+      	<div class="nearby-lawyers">
+      		<h3>Other Nearby Lawyers</h3>
+      		<div class="rounded-border">
+      			<div class="row top-rated-lawyer">
+	            <a href="#"><img class="img-circle" src="assets/img/user-md-01.jpg" alt=""></a>
+	            <a href="#"><span>Rebecca Atkins</span></a><br>
+	            <span>business lawyer</span><br>
+	            <span class="address">Newcastle, NSW</span><br>
+		        	<input type="text" class="invisible rated-01" value="5">
+      			</div>
+      			<div class="row top-rated-lawyer">
+	            <a href="#"><img class="img-circle" src="assets/img/user-md-02.jpg" alt=""></a>
+	            <a href="#"><span>John Smith</span></a><br>
+	            <span>business lawyer</span><br>
+	            <span class="address">Newcastle, NSW</span><br>
+		        	<input type="text" class="invisible rated-01" value="4.5">
+      			</div>
+      			<div class="row top-rated-lawyer">
+	            <a href="#"><img class="img-circle" src="assets/img/user-md-03.jpg" alt=""></a>
+	            <a href="#"><span>Jeniffer Smith</span></a><br>
+	            <span>business lawyer</span><br>
+	            <span class="address">Newcastle, NSW</span><br>
+		        	<input type="text" class="invisible rated-01" value="4">
+      			</div>
+      		</div>
+      	</div>      	
+
+      </div><!-- /.sidebar -->
+
+
+
+
+
+      <div class="profile-content">
+        <div role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Your Reviews</a></li>
+            <li role="presentation"><a href="#qa" aria-controls="qa" role="tab" data-toggle="tab">Q&amp;A</a></li>
+            <li role="presentation"><a href="#profile-information" aria-controls="profile-information" role="tab" data-toggle="tab">&nbsp;Profile information&nbsp;</a></li>
+            <li role="presentation"><a href="#notification" aria-controls="notification" role="tab" data-toggle="tab">Notification settings</a></li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+
+            <!-- first tab -->
+            <div role="tabpanel" class="tab-pane fade in active" id="reviews">
+							<a href="#">
+								<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+							</a>
+							<div class="no-reviews">
+								You don’t have any client reviews yet :( <br>
+								Share your profile with your recent happy clients and invite them to leave you a review 
+							</div>
+          		<div class="general-info clearfix">
+          			<div class="general-info-left clearfix">
+          				<h4>Review Distribution</h4>
+          				<canvas id="myChart" width="100" height="100"></canvas>
+          				<ul>
+          					<li><span class="orange">50%</span> Positive</li>
+          					<li>45% Neutral</li>
+          					<li><span class="blue">5% </span>Critical</li>
+          				</ul>
+          			</div><!-- /.general-info-left -->
+
+          			<div class="general-info-right">
+          				<h4>Skils Rating</h4>
+          				<div>
+          					<span class='pull-left'>Knowledge <span class="orange">*</span></span>
+          					<input type="text" class="invisible rated-02" value="01">
+          				</div>
+          				<div>
+          					<span class='pull-left'>Understanding &amp; Empathy <span class="orange">*</span></span>
+          					<input type="text" class="invisible rated-02" value="02">
+          				</div>
+          				<div>
+          					<span class='pull-left'>Keeping me informed <span class="orange">*</span></span>
+          					<input type="text" class="invisible rated-02" value="03">
+          				</div>
+          				<div>
+          					<span class='pull-left'>Professionalism <span class="orange">*</span></span>
+          					<input type="text" class="invisible rated-02" value="04">
+          				</div>
+          			</div><!-- /.general-info-right -->
+            	</div><!-- /.general-info -->
+
+            	<div class="review-item clearfix">
+            		<div class="reviewer">
+            			<img class="reviewer-avatar img-circle" src="assets/img/reviewer-01.jpg" alt="..">                  
+									<span class="small">Erik Smith</span>
+            		</div>
+
+            		<div class="review clearfix">
+            			<div class="rating">
+	          				<input type="text" class="rated-03 invisible" value="4.5">
+            			</div>
+          				<span>| Buisiness &amp; commercial low</span>
+          				<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi harum, eaque consectetur ea, mollitia aspernatur asperiores porro? Quis quae, obcaecati nemo illo voluptatibus vitae maxime tempore neque error accusantium."</p>
+          				<div class="rated clearfix">
+          					<div class="rated-left">Knowledge <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="04"></div>
+          					<div class="rated-left">Understanding &amp; Empathy <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="04"></div>
+          					<div class="rated-left">Keeping me informed <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="05"></div>
+          					<div class="rated-left">Professionalism <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="05"></div>
+          				</div>
+          				<div>
+          					<span class="date">03/12/2015</span>
+          					<a href="#" class="share">Share Review</a>
+          				</div>
+            		</div><!-- /.review -->
+            	</div><!-- /.review-item -->
+
+            	<div class="review-item clearfix">
+            		<div class="reviewer">
+            			<img class="reviewer-avatar img-circle" src="assets/img/reviewer-02.jpg" alt="..">                  
+									<span class="small">Don Joe</span>
+            		</div>
+
+            		<div class="review clearfix">
+            			<div class="rating">
+	          				<input type="text" class="rated-03 invisible" value="4">
+            			</div>
+          				<span>| Buisiness &amp; commercial low</span>
+          				<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi harum, eaque consectetur ea, mollitia aspernatur asperiores porro? Quis quae, obcaecati nemo illo voluptatibus vitae maxime tempore neque error accusantium."</p>
+          				<div class="rated clearfix">
+          					<div class="rated-left">Knowledge <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="5"></div>
+          					<div class="rated-left">Understanding &amp; Empathy <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="4"></div>
+          					<div class="rated-left">Keeping me informed <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="3"></div>
+          					<div class="rated-left">Professionalism <span class="orange">*</span></div>
+          					<div class="rated-right"><input type="text" class="invisible rated-04" value="4"></div>
+          				</div>
+          				<div>
+          					<span class="date">03/12/2015</span>
+          					<a href="#" class="share">Share Review</a>
+          				</div>
+            		</div><!-- /.review -->
+            	</div><!-- /.review-item -->
+
+            </div><!-- /#reviews -->
+
+            <!-- secound tab -->            
+            <div role="tabpanel" class="tab-pane fade" id="qa">
+            	<div class="disclaimer">
+            		<strong>Your Disclaimer </strong><span class="orange">*</span><span class="pencil-ico"></span><span class="checked-ico"></span>
+            		<textarea placeholder="E.g. The information contained in this answer is provided for information purposes only and does not establish a solicitor-client relationship. If you require legal advice please contact me to discuss."></textarea>
+            	</div>
+
+            	<div class="qa-item">
+            		<div class="question">Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu?</div>
+            		<div class="q-author">A.R of Redhead NSW 18.5.2015 8.45am</div>
+            		<div class="answer">Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu. Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu... <a href="#">Read more</a></div>
+            	</div>
+	            <div class="qa-item">
+            		<div class="question">Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu?</div>
+            		<div class="q-author">A.R of Redhead NSW 18.5.2015 8.45am</div>
+            		<div class="answer">Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu. Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu... <span class="pencil-ico"></span></div>
+            	</div>
+	            <div class="qa-item">
+	          		<div class="question">Vivamus elementum nunc sed velit auctor auctor. Pellentesque   amet augue sagittis, varius tortor at, varius arcu?</div>
+	          		<div class="q-author">A.R of Redhead NSW 18.5.2015 8.45am</div>
+	          		<div class="textarea-wrapper">
+	          			<textarea placeholder="E.g. The information contained in this answer is provided for information purposes only and does not establish a solicitor-client relationship. If you require legal advice please contact me to discuss."></textarea>
+	          			<span class="checked-ico"></span>
+	          		</div>
+            	</div>
+          	</div><!-- /#qa --> 
+
+            <!-- third tab -->
+            <div role="tabpanel" class="tab-pane fade" id="profile-information">
+            	<h4>About You</h4>
+            	<div class="row">
+          			<div class="col-sm-6">
+          				<span>*First name:</span>
+          				<span class="input-description">Add prefered first name</span>
+          				<input type="text">
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Last name:</span>
+          				<span class="input-description">Add prefered last name</span>
+          				<input type="text">
+          			</div>
+          		</div><!-- /.row -->	
+          		<div class="row">
+          			<div class="col-sm-6">
+          				<span>*Email:</span>
+          				<div class="input-wrapper">
+          					<input type="text" placeholder="Use your work email address">
+          					<span class="pencil-ico"></span>
+          					<span class="checked-ico"></span>
+          				</div>
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Password:</span>
+          				<div class="input-wrapper">
+          					<input type="password">
+          					<span class="pencil-ico"></span>
+          					<span class="checked-ico"></span>
+          				</div>
+          			</div>
+          		</div><!-- /.row -->
+          		<div class="row">
+          			<div class="col-sm-6">
+          				<span>*Year of admission:</span>
+          				<select >
+          					<option value="" disabled selected>&nbsp;</option>
+          					<option value="">01</option>
+          					<option value="">02</option>
+          					<option value="">03</option>
+          				</select>
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Gender:</span>
+          				<form class="gender" action="#">
+										<input type="radio" name="sex" value="male"><span class="radio-label">Male</span>
+										<input type="radio" name="sex" value="female"><span class="radio-label">Female</span>
+									</form>
+          			</div>
+          		</div><!-- /.row -->
+          		<div class="row">
+          			<div class="col-sm-6">
+          				<span>*Practicing certificate state:</span>
+          				<select >
+          					<option value="" disabled selected>Select state</option>
+          					<option value="">Australia</option>
+          					<option value="">Austria</option>
+          					<option value="">Azerbaijan</option>
+          				</select>
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Practicing certificate number:</span>
+          				<input type="text" placeholder="Enter min 4 digits">          				
+          			</div>
+          		</div><!-- /.row -->
+          		<div class="row">
+          			<div class="col-sm-12">
+          				<div>*Practice areas:</div>
+          				<input type="text" name="tags" placeholder="Min 1 practice area, maxium 3" class="tm-input"/>
+          				<button class="btn" id="addtag">Add</button>
+          				<div class="tags-container"></div>
+          			</div>
+          		</div><!-- /.row -->
+          		<div class="media">
+					      <div class="media-left">
+									<input type="checkbox">
+					      </div>
+					      <div class="media-body">					        
+					        Please note that your selection of practice areas is final. You will be able to delete practice areas in the future but not swap or add practice areas. Please ensure you have selected all relevant practice areas and sub-categories 
+					      </div>
+					    </div>
+					    <div class="row">          				
+            		<div class="col-sm-12"><strong>About Your Firm</strong><span class="input-description">Change main address <span class="separator">|</span> Add branch address</span></div>
+					    </div><!-- /.row -->
+					    <div class="row">          				
+            		<div class="col-sm-12">
+            			<span>*Firm name:</span>
+            			<input type="text" name="firm-name">
+            		</div>
+					    </div><!-- /.row -->
+					    <div class="row">
+          			<div class="col-sm-6">
+          				<span>*Firm street:</span>
+          				<input type="text">
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Firm city:</span>
+          				<input type="text">
+          			</div>
+          		</div><!-- /.row -->	
+          		<div class="row">
+          			<div class="col-sm-6">
+          				<span>*Firm postcode:</span>
+          				<input type="text">
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Firm phone number:</span>
+          				<input type="text">
+          			</div>
+          		</div><!-- /.row -->	
+          		<div class="row">
+          			<div class="col-sm-6">
+          				<span>Firm website::</span>
+          				<input type="text" placeholder="http://samplesite.com">          				
+          			</div>
+          			<div class="col-sm-6">
+          				<span>*Firm size:</span>
+          				<select >
+          					<option value="" disabled selected>Select size</option>
+          					<option value="">size 01</option>
+          					<option value="">size 02</option>
+          					<option value="">size 03</option>
+          				</select>
+          			</div>
+          		</div><!-- /.row -->
+          		<div class="row">          				
+            		<div class="col-sm-9">
+            			<span>*Upload your avatar:</span><br>
+          				<input class="nicefileinput nice test NFI-current" type="file" id="fileInput">
+          				<button class="btn btn-up-img" type="button">Upload</button>
+            		</div>
+					    </div><!-- /.row -->
+					    <div class="row">          				
+            		<div class="col-sm-12">
+            			<a class="prev-prof" href="#">Preview my profile</a>
+            			<button class="pull-right btn btn-orange" type="button">Publish</button>
+            		</div>
+					    </div><!-- /.row -->
+					    <div class="row">          				
+            		<div class="col-sm-12 text-center">
+            			By clicking “Publish” button you agree to LawCorner's <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a> and subscribe to our updates (you can unsubscribe any time)
+            		</div>
+					    </div><!-- /.row -->
+            </div>
+
+            <!-- fourth tab -->
+            <div role="tabpanel" class="tab-pane fade" id="notification">
+            	<h4>Send Me Notification For</h4>
+            	<form action="#">
+								<input type="checkbox" name="notification" value="review">Client reviews<br>
+								<input type="checkbox" name="notification" value="question">Client questions in my areas of practice<br>
+								<input type="checkbox" name="notification" value="likeable">Likeable Lawyers Blog (approx. fortnightly) 
+							</form>
+							<div>As part of being a member you will also receive occasional LawCorner updates.</div>
+							<a class="btn btn-orange" href="#">Save Changes</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- /.profile-content -->
+
+    </div><!-- /.container -->
+
+		<!-- place where .nearby-lawyers element will be placed for mobile -->
+		<div class="container mob-nearby-lawyers-holder"></div>
+
+
+    <!-- footer -->
+    <div class="footer container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h4>Clients</h4>
+            <ul>
+              <li><a href="#">Find information</a></li>
+              <li><a href="#">Find a lawyer</a></li>
+              <li><a href="#">Review a lawyer</a></li>
+              <li><a href="#">FAQ’s</a></li>
+              <li><a href="#">Register</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3">
+            <h4>Lawyers</h4>
+            <ul>
+              <li><a href="#">Claim your profile</a></li>
+              <li><a href="#">FAQ’s</a></li>
+              <li><a href="#">Likeable Lawyers blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3">
+            <h4>Company</h4>
+            <ul>   
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms of use</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-3 social">
+            <h4>Social</h4>
+            <ul>
+              <li><a href="#"><span class="linkedin"></span>Linkedin</a></li>
+              <li><a href="#"><span class="facebook"></span>Facebook</a></li>
+              <li><a href="#"><span class="twitter"></span>Twitter</a></li>
+              <li><a href="#"><span class="google"></span>Google +</a></li>
+            </ul>
+          </div>
+        </div><!-- /.row -->
+        <div class="copy">Copyright © 2013 Law Corner. All rights reserved.</div> 
+      </div><!-- /.container -->
+    </div><!-- /.footer .container-fluid -->
+
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
+    <script src="assets/js/star-rating.min.js"></script>
+    <script src="assets/js/tagmanager.js"></script>
+    <script src="assets/js/jquery.nicefileinput.min.js"></script>
+    <script src="assets/js/icheck.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+  </body>
+</html>
