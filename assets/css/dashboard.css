@@ -402,9 +402,17 @@ ul.nav.navbar-nav.navbar-right {
 	border-bottom: 1px solid #e2e2e2;
 }
 .question {
+	position: relative;
+	display: block;
 	font-weight: 700;
 	color: #000;
 	cursor: pointer;
+}
+.glyphicon-menu-down {
+  position: absolute;
+  right: -15px;
+  left: auto;
+  color: #F8663D;
 }
 .q-author,
 .answer {
@@ -871,6 +879,9 @@ select option[disabled] {
 	.navbar-left>li>a:focus, 
 	.navbar-left>li>a:hover {
 		background: transparent;
+	}
+	.glyphicon-menu-down {
+		right: -5px;
 	}
 	.nav-tabs>li {
 		width: 25%;
